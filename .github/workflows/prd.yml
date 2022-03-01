@@ -1,4 +1,4 @@
-name: Run Tests, Build Dockerfile, Run on Heroku
+name: Production Workflow
 
 on:
   push:
@@ -42,7 +42,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: kaw393939/flaskbase
+          images: pm42/docker-flask-cicd:latest
 
       - name: Build and push
         uses: docker/build-push-action@v2
@@ -58,6 +58,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "kwilliam-flask" #Must be unique in Heroku
-          heroku_email: "keith@webizly.com"
+          heroku_app_name: "pm42-docker-flask-prd"
+          heroku_email: "pm42@njit.edu"
           usedocker: true
