@@ -42,7 +42,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: pm42/docker-flask-cicd:latest
+          images: pm42/docker-flask-cicd
 
       - name: Build and push
         uses: docker/build-push-action@v2
