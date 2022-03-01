@@ -1,3 +1,22 @@
-body {
-font-size: 200%;
+.red-color {
+    color: darkred;
+}
+.strong-font{
+    font-weight: bolder;
+}
+#custom-font {
+    font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+}
+
+.dotted-black-border {
+    border: 2px dotted black;
+}
+
+.border-padding {
+    padding: 12px;
+}
+
+div p#special-para {
+    color: orange;
+    font-weight: bold;
 }

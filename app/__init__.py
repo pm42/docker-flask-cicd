@@ -9,6 +9,12 @@ def create_app():
 
     @app.route("/")
     def index():
-        return render_template('index.html')
+        name = "Prem Kumar's"
+        return render_template('index.html', name=name)
+
+    @app.route("/about")
+    def about():
+        name = "Prem Kumar's"
+        return render_template('about.html', name=name)
 
     return app
