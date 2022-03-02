@@ -12,3 +12,5 @@ def test_home_page(client):
            b'aria-current="page">Home</a></li>'\
            in response.data
     assert b'<li class="nav-item"><a href="/about" class="nav-link">About</a></li>' in response.data
+    # Check content
+    assert b'<h1>Facilisi Morbi.</h1>' in response.data
